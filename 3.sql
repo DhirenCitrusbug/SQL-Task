@@ -1,0 +1,1 @@
+select core_song.id as song_id,core_artist.id as artist_id ,core_song.name as songname ,core_artist.name as artistname,core_song.genre_id from core_song,core_song_artist,core_artist where core_song.id = core_song_artist.song_id and core_song_artist.artist_id = core_artist.id and core_song.genre_id = 21 

@@ -1,0 +1,1 @@
+select count(core_song.id),core_artist.name as artist_name from core_song_artist,core_song,core_artist where core_song_artist.artist_id = core_artist.id and core_song_artist.song_id = core_song.id group by artist_name

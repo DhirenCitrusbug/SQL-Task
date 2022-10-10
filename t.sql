@@ -1,0 +1,3 @@
+-- select cp.name as playlistname,count(distinct csa.artist_id) from core_playlist cp,core_playlist_song cps,core_song_artist csa,core_artist ca where cps.playlist_id = cp.id and csa.artist_id = ca.id and cps.song_id = csa.song_id group by playlistname
+
+select cp.name as playlistname,count(csa.id) from core_playlist cp,core_playlist_song cps,core_song_artist csa,core_artist ca where cps.playlist_id = cp.id and csa.artist_id = ca.id and cps.playlist_id=106 and cps.song_id = csa.song_id group by playlistname
